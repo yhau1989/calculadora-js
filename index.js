@@ -43,17 +43,17 @@ const identifica = (texto) => {
     if(texto.includes('+'))
     {
         const items = texto.split('+');
-        return sum(items[0], items[1]);
+        return sum(items[0], items[1]) * -1;
     } else if(texto.includes('-')) {
         const items = texto.split('-');
-        return res(items[0], items[1]);
+        return res(items[0], items[1])  * -1;
     } else if(texto.includes('*')) {
         const items = texto.split('*');
-        return mul(items[0], items[1]);
+        return mul(items[0], items[1]) * -1;
         return false;
     } else if(texto.includes('/')) {
         const items = texto.split('/');
-        return div(items[0], items[1]);
+        return div(items[0], items[1]) * -1;
     }
 }
 
@@ -70,7 +70,11 @@ const total = () => {
             return false;
         } else if(texto.includes('-')) {
             const items = texto.split('-');
-            console.log('total', items);
+            if(items.length == 3)
+            {
+                led.value = sum(items[1], items[2]) * -1;
+                return false;
+            }
             led.value = res(items[0], items[1]);
             return false;
         } else if(texto.includes('*')) {

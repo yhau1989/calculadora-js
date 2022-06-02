@@ -1,0 +1,26 @@
+
+
+.caja_texto {
+    padding: 9px;
+    margin: 18px;
+    border-radius: 13px;
+    border: 1px solid #c3c3c3;
+    font-size: 27px;
+}
+
+button {
+    font-size: 14px;
+    padding: 10px;
+    background: #000;
+    color: #fff;
+    border-radius: 7px;
+}
+
+.contenedor_teclas {
+    width: 300px;
+    margin: 21px;
+    padding: 0px 24px 0px 24px;
+    display: grid;
+    grid-template-columns: 72px 72px 72px;
+    grid-gap: 10px;
+}
